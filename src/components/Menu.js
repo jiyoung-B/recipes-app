@@ -9,7 +9,9 @@ const Menu = ({ recipes }) => {
             </header>
             <div className="recipes">
                 {recipes.map((recipe, i) => (
-                    <Recipe key={i} {...recipe} />
+                    <React.StrictMode>
+                     <Recipe key={i} {...recipe} />
+                    </React.StrictMode>
                 ))}
             </div>
         </article>
